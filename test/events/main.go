@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/trendvidia/glfw-js"
+	"github.com/belluikit/glfw-js"
 )
 
 var counter int = -1

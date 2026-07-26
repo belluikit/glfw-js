@@ -1,4 +1,4 @@
-module github.com/trendvidia/glfw-js
+module github.com/belluikit/glfw-js
 
 go 1.19
 
