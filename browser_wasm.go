@@ -80,7 +80,7 @@ func CreateWindow(_, _ int, title string, monitor *Monitor, share *Window) (*Win
 	// Create the WebGL context, unless a context-less window was requested via
 	// WindowHint(ClientAPI, NoAPI). With NoAPI the canvas is left bare so the
 	// caller (the WebGPU backend) can attach a "webgpu" context to it; a canvas
-	// can only ever hold one context type. (trendvidia: WebGPU.)
+	// can only ever hold one context type. (belluikit: WebGPU.)
 	var context js.Value
 	if api, ok := hints[ClientAPI]; !ok || api != NoAPI {
 		var err error
@@ -479,7 +479,7 @@ func (w *Window) MakeContextCurrent() {
 
 // GetCanvas returns the underlying HTML5 canvas element as a js.Value. The
 // WebGPU backend uses it to build a wgpu surface (canvas.getContext("webgpu"))
-// for a window created with WindowHint(ClientAPI, NoAPI). (trendvidia: WebGPU.)
+// for a window created with WindowHint(ClientAPI, NoAPI). (belluikit: WebGPU.)
 func (w *Window) GetCanvas() js.Value {
 	return w.canvas
 }
